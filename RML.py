@@ -141,7 +141,9 @@ X_train_combined = hstack([X_train_question, X_train_context,X_train_title])
 X_test_combined = hstack([X_test_question, X_test_context,X_test_title])
 
 
-clf = RandomForestClassifier(n_estimators=100, random_state=42)
+
+clf = RandomForestClassifier(n_estimators=100, random_state=177013, verbose=1)
+
 clf.fit(X_train_combined, data_train['text'])
 
 
